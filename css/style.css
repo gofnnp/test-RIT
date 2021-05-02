@@ -1,0 +1,46 @@
+#put_act_main {
+  float: right;
+  width: 278px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.inp_name{
+  padding: 6px 0 4px 10px;
+  border: 1px solid #cecece;
+  background: #F6F6f6;
+  border-radius: 8px;
+}
+
+.col-3{
+  border-right: solid #343a40 1px;
+}
+
+.col-9{
+  padding-top: 12px;
+}
+
+.row{
+  height: calc(100vh - 69px);
+  width: 100vw;
+  background-color: #8994A0;
+}
+
+.navbar{
+  min-height: 69px;
+}
+
+.buttons{
+  height: 72px;
+  background-color: #343a40;
+  border-radius: 7px;
+}
+
+.acives{
+  height: calc(100% - 72px);
+  border-radius: 12px;
+}
+
+.modal-content {
+  height: 93vh;
+}
