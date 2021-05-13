@@ -1,0 +1,33 @@
+2021-05-06 14:15:09 pid:1 Error: Undefined constant "data" in C:\Users\Пользователь-ПК\Desktop\Игра на websocket\server\server.php:14
+Stack trace:
+#0 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Connection\TcpConnection.php(637): {closure}()
+#1 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Events\Select.php(293): Workerman\Connection\TcpConnection->baseRead()
+#2 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#3 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(1417): Workerman\Worker->run()
+#4 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#5 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#6 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\server\server.php(24): Workerman\Worker::runAll()
+#7 {main}
+2021-05-06 14:15:09 pid:1 Worker process terminated
+2021-05-06 14:16:48 pid:1 Error: Undefined constant "data" in C:\Users\Пользователь-ПК\Desktop\Игра на websocket\server\server.php:14
+Stack trace:
+#0 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Connection\TcpConnection.php(637): {closure}()
+#1 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Events\Select.php(293): Workerman\Connection\TcpConnection->baseRead()
+#2 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#3 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(1417): Workerman\Worker->run()
+#4 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#5 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#6 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\server\server.php(24): Workerman\Worker::runAll()
+#7 {main}
+2021-05-06 14:16:48 pid:1 Worker process terminated
+2021-05-06 14:18:42 pid:1 Error: Undefined constant "data" in C:\Users\Пользователь-ПК\Desktop\Игра на websocket\server\server.php:14
+Stack trace:
+#0 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Connection\TcpConnection.php(637): {closure}()
+#1 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Events\Select.php(293): Workerman\Connection\TcpConnection->baseRead()
+#2 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#3 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(1417): Workerman\Worker->run()
+#4 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#5 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\vendor\workerman\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#6 C:\Users\Пользователь-ПК\Desktop\Игра на websocket\server\server.php(24): Workerman\Worker::runAll()
+#7 {main}
+2021-05-06 14:18:42 pid:1 Worker process terminated

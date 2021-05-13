@@ -3,9 +3,14 @@ const $body_form = document.querySelector('.modal-body');
 const $nameActive = document.getElementById("nameActive");
 const $put_act = document.getElementById("put-act");
 const $put_act_main = document.getElementById("put_act_main");
+const $actives = document.querySelector('.actives');
 
-const act = {};
-const actives = {};
+
+const ws = new WebSocket('ws://localhost:2346');
+console.log(ws);
+
+let act = {};
+let actives = {};
 
 
 const createElement = (tag, className, className1) => {
@@ -21,11 +26,12 @@ const createElement = (tag, className, className1) => {
 
 
 $put_act_main.addEventListener('click', function(e){
-
-  <? echo "console.log('sdvvesd');"?>
   e.preventDefault();
+  const $put_name = createElement('input', 'inp_name', 'mb-3');
+  console.log($put_name.placeholder);
   const $money = createElement('button', 'btn', 'btn-success');
   const $not_money = createElement('button', 'btn', 'btn-success');
+  $body_form.appendChild($put_name);
   $body_form.appendChild($money);
   $body_form.appendChild($not_money);
   $money.style.width = '49.5%';
@@ -106,6 +112,11 @@ $put_act_main.addEventListener('click', function(e){
   });
 
 
+  $put_act.addEventListener('click', function(e){
+    $body_form.innerHTML = '';
+    ws.send(JSON.stringify(act));
+  });
+
   $not_money.addEventListener('click', function(e){
       e.preventDefault();
       act.name = $nameActive.value;
@@ -116,17 +127,52 @@ $put_act_main.addEventListener('click', function(e){
       $not_money.remove();
   });
 
-
-
-  $put_act.addEventListener('click', function(e){
-    e.preventDefault();
-    let item = Object.keys(actives).length;
-    console.log(item);
-    actives[item] = act;
-
-    $body_form.innerHTML = '';
-    console.log(actives);
-  });
-
-
 });
+
+const createAct = (objAct) => {
+  let $active = createElement('div', 'new_act');
+  $actives.appendChild($active);
+  let e = 0;
+  if (objAct.name) {
+    let name = createElement('div', 'act_el');
+    name.innerText = objAct.name;
+    $active.appendChild(name);
+    e++
+  };
+  if (objAct.type) {
+    let type = createElement('div', 'act_el');
+    type.innerText = objAct.type;
+    $active.appendChild(type);
+    e++
+  };
+  if (objAct.place) {
+    let place = createElement('div', 'act_el');
+    place.innerText = objAct.place;
+    $active.appendChild(place);
+    e++
+  };
+  if (objAct.currency) {
+    let currency = createElement('div', 'act_el');
+    currency.innerText = objAct.currency;
+    $active.appendChild(currency);
+    e++
+  };
+  e = 100 / e;
+  console.log(e);
+  // let $act_el = document.querySelector('.act_el');
+  // $act_el.style.width = `${e}%`;
+
+
+  var x = document.querySelectorAll(".act_el");
+  console.log(x);
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.width = `${e}%`;
+  }
+};
+
+
+ws.onmessage = response => {
+  let newAct = JSON.parse(response.data);
+  createAct(newAct);
+  console.log(newAct);
+}

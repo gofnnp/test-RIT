@@ -36,11 +36,35 @@
   border-radius: 7px;
 }
 
-.acives{
-  height: calc(100% - 72px);
+.actives{
+  height: calc(100vh - 244px);
   border-radius: 12px;
+  margin-top: 40px;
+  overflow: scroll;
+}
+
+.actives::-webkit-scrollbar {
+  width: 0;
 }
 
 .modal-content {
   height: 93vh;
+}
+
+.new_act {
+  background-color: #343A40;
+  height: 72px;
+  margin-top: 12px;
+  border-radius: 7px;
+  display: flex;
+  border: 2px solid white;
+}
+
+.act_el {
+  border-right: 1px solid;
+  height: 100%;
+  text-align: center;
+  padding-top: 2%;
+  color: #fff;
+  font-size: 25px;
 }

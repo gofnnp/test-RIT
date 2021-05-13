@@ -2,7 +2,7 @@
 <html lang="ru" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" crossorigin="anonymous">
 		<title>Редактор активов</title>
 	</head>
@@ -18,9 +18,6 @@
 		      </div>
 		      <div class="modal-body">
 						<h2 id="h-form" style="text-align: center;">Выберите тип и введите название актива</h2>
-						<form name="publish">
-							<input id="nameActive" class="inp_name mb-3" type="text" name="name" placeholder="введите название">
-						</form>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
@@ -31,7 +28,16 @@
 		</div>
 
 
-		<?php require "components/header.php" ?>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">Редактор активов</a>
+        <form class="d-flex">
+          <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+          <button class="btn btn-success" type="submit">Поиск</button>
+        </form>
+      </div>
+    </nav>
+
 
 
 		<div class="row m-0">
@@ -46,14 +52,14 @@
 					<div class="buttons">
 						<button type="button" id="put_act_main" class="btn btn-success mt-3" data-toggle="modal" data-target="#exampleModalLive">Добавить</button>
 					</div>
-					<div class="acives">
+					<div class="actives">
 
 					</div>
 				</div>
 		 </div>
 
 
-		 <script src="js/test.js" type="module"></script>
+		 <script src="app.js" type="module"></script>
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
