@@ -5,11 +5,19 @@
   margin-right: 12px;
 }
 
+#edit_act {
+  float: right;
+  width: 278px;
+  height: 40px;
+  margin-right: 12px;
+}
+
 .inp_name{
   padding: 6px 0 4px 10px;
   border: 1px solid #cecece;
   background: #F6F6f6;
   border-radius: 8px;
+  width: 300px;
 }
 
 .col-3{
@@ -53,7 +61,7 @@
 
 .new_act {
   background-color: #343A40;
-  height: 72px;
+  height: auto;
   margin-top: 12px;
   border-radius: 7px;
   display: flex;
@@ -62,9 +70,10 @@
 
 .act_el {
   border-right: 1px solid;
-  height: 100%;
+  height: auto;
   text-align: center;
   padding-top: 2%;
+  padding-bottom: 2%;
   color: #fff;
   font-size: 25px;
 }
